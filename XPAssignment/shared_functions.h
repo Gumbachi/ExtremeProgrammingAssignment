@@ -28,8 +28,12 @@ bool isPrime(int num) {
 }
 
 string processHighOrLowGuess(int num, int guess) {
-    // TODO
-    return "";
+    if (num < guess)
+        return "Your guess was too LOW.";
+    else if (num > guess)
+        return "Your guess was too HIGH.";
+    else
+        return "That guess was correct!";
 }
 
 string showLastDigitOptions(int num) {
@@ -114,17 +118,6 @@ void guessingGameLoop (int count){
     cout << "4) Reveal possible last digits of the number.\n";
     cout << "Currently Known Info: \n" << "Known Range: " << LOWER << " to " << UPPER;
         
-<<<<<<< HEAD
-=======
-    
-
-    //if (count >= 4)
-        //drewTextDisplay();
-    // if (count >= 4)  -->  In case you want to limit when your text shows up like I do.
-        //jaredTextDisplay();
-
-
->>>>>>> 317d16bbe4cefdc822d4f1213df19c235ce947d1
     cin >> playerChoice;
     while (validChoice == false){
         validChoice = true;
