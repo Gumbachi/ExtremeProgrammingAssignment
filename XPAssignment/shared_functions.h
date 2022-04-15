@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 // For the generation of random numbers.
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,8 +42,19 @@ string processHighOrLowGuess(int num, int guess) {
 }
 
 string showLastDigitOptions(int num) {
-    // TODO
-    return "Last digit is one of these: 7, 3, 5";
+    int onesDigit = num % 10;
+    srand(time(0)); 
+
+    int digitOne = -1, digitTwo = -1;
+    while (digitOne == -1 || digitOne == onesDigit)
+        digitOne = (rand() % 10);
+    while (digitTwo == -1 || digitTwo == onesDigit)
+        digitTwo = (rand() % 10);
+    // Would likley have to be a stringstream, but I did this instead to avoid that.
+    string returnString = "Last digit is one of these: " + digitOne;
+    returnString += (", " + digitTwo);
+    returnString += (", " + onesDigit);
+    return returnString;
 }
 
 string processDivisibilty(int num, int divisor){
@@ -111,13 +123,6 @@ void guessingGameLoop (int count){
     cout << "4) Reveal possible last digits of the number.\n";
     cout << "Currently Known Info: \n" << "Known Range: " << LOWER << " to " << UPPER;
         
-    
-
-    if (count >= 4)
-        drewTextDisplay();
-    // if (count >= 4)  -->  In case you want to limit when your text shows up like I do.
-        jaredTextDisplay();
-
     cin >> playerChoice;
     while (validChoice == false){
         validChoice = true;
