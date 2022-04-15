@@ -37,6 +37,11 @@ string processDivisibilty(int num, int input){
     return "";
 }
 
+string determinePrime(int num){
+    // TODO; input is the divisor
+    return "The number is (prime or not)";
+}
+
 int generateNumber(){
     srand(time(0)); 
     int number;

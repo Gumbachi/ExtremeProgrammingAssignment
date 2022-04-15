@@ -17,5 +17,4 @@ TEST(JaredTestSuite, ShowLastDigitOptions) {
 	unexpected = string::npos;
 	actual = result.find('0');
 	EXPECT_NE(unexpected, actual);
-	
 }

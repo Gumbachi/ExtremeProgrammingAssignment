@@ -1,13 +1,27 @@
 #include "pch.h"
+#include <string>
+#include "shared_functions.h"
 
-/*
-- Determine whether the given number is prime or not.
-*/
+TEST(DrewTestSuite, TestCheckForPrime) {
+	int num = 210;  // Purposefully out-of-scope of the range.
 
-TEST(DrewTestSuite, ExampleTest) {
-	EXPECT_EQ(true, true);
-}
+	string expected = "Two is not a factor";
+	string actual = determinePrime(num);
 
-void drewTextDisplay(){
-	"3) Check whether the number is prime or not."
+	EXPECT_EQ(expected, actual);
+
+	string expected = "Three is not a factor";
+	string actual = determinePrime(num);
+
+	EXPECT_EQ(expected, actual);
+
+	string expected = "Five is not a factor";
+	string actual = determinePrime(num);
+
+	EXPECT_EQ(expected, actual);
+
+	string expected = "Seven is not a factor";
+	string actual = determinePrime(num);
+
+	EXPECT_EQ(expected, actual);
 }
