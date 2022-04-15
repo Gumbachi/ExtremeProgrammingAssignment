@@ -7,3 +7,7 @@
 TEST(DrewTestSuite, ExampleTest) {
 	EXPECT_EQ(true, true);
 }
+
+void drewTextDisplay(){
+	"3) Check whether the number is prime or not."
+}
