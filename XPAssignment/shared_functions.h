@@ -10,15 +10,6 @@ using namespace std;
 const int LOWER = 0, UPPER = 100;
 // Prototypes of functions used in multiple files
 
-// Sample names, as to not give away the 'suprise'.
-void drewTextDisplay();
-void jaredTextDisplay();
-
-// Can change the type of function depending on what you think my thing should do.
-bool drewSpecialFeature();
-// Can change the type of function depending on what your thing does.
-bool jaredSpecialFeature();
-
 // Check if a number is prime
 bool isPrime(int num) {
     // 0 and 1 are not prime numbers
@@ -79,7 +70,7 @@ int getNumberInput(string prompt) {
 
         try {
             cin >> guess;
-        } catch (int e) {
+        } catch (...) {
             continue;
         }
         break;
@@ -92,7 +83,7 @@ void guessingGameLoop (int count){
     int playerChoice, divisibiltyOption;
     int lower, upper;
     int newRange = -1;
-    int count = 0;
+    count = 0;
 
     int numberToGuess = generateNumber();
 
@@ -113,10 +104,11 @@ void guessingGameLoop (int count){
         
     
 
-    if (count >= 4)
-        drewTextDisplay();
+    //if (count >= 4)
+        //drewTextDisplay();
     // if (count >= 4)  -->  In case you want to limit when your text shows up like I do.
-        jaredTextDisplay();
+        //jaredTextDisplay();
+
 
     cin >> playerChoice;
     while (validChoice == false){

@@ -23,16 +23,16 @@ TEST(HighLowTests, TestHighLowGuessResult) {
 	EXPECT_EQ(expected, actual);
 
 	// Guess is higher than target
-	int guess = 98;
-	string expected = "Too High.";
-	string actual = processHighOrLowGuess(num, guess);
+	guess = 98;
+	expected = "Too High.";
+	actual = processHighOrLowGuess(num, guess);
 
 	EXPECT_EQ(expected, actual);
 
 	// Guess is correct
-	int guess = 57;
-	string expected = "You Guessed The Number!";
-	string actual = processHighOrLowGuess(num, guess);
+	guess = 57;
+	expected = "You Guessed The Number!";
+	actual = processHighOrLowGuess(num, guess);
 
 	EXPECT_EQ(expected, actual);
 }
@@ -51,9 +51,9 @@ TEST(DivisibilityTest, TestDivisibility){
 	EXPECT_EQ(expected, actual);
 
 	// Num IS divisible by the selected number
-	int input = 6;
-	string expected = "The number is divisible by " + input;
-	string actual = processDivisibilty(num, input);
+	input = 6;
+	expected = "The number is divisible by " + input;
+	actual = processDivisibilty(num, input);
 
 	EXPECT_EQ(expected, actual);
 }

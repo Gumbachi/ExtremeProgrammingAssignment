@@ -10,18 +10,18 @@ TEST(DrewTestSuite, TestCheckForPrime) {
 
 	EXPECT_EQ(expected, actual);
 
-	string expected = "Three is not a factor";
-	string actual = determinePrime(num);
+	expected = "Three is not a factor";
+	actual = determinePrime(num);
 
 	EXPECT_EQ(expected, actual);
 
-	string expected = "Five is not a factor";
-	string actual = determinePrime(num);
+	expected = "Five is not a factor";
+	actual = determinePrime(num);
 
 	EXPECT_EQ(expected, actual);
 
-	string expected = "Seven is not a factor";
-	string actual = determinePrime(num);
+	expected = "Seven is not a factor";
+	actual = determinePrime(num);
 
 	EXPECT_EQ(expected, actual);
 }
