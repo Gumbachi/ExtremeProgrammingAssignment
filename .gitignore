@@ -359,6 +359,8 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+# Below is all the goog;etest stuff added to the .gitignore.
+
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 .DS_Store
