@@ -35,11 +35,6 @@ bool isPrime(int num) {
     return true;
 }
 
-// Types can be changed based on the judgement of the feture implementer.
-bool disvisibiltyCheck(int num, int divisor) {
-    return num % divisor == 0;
-}
-
 string processHighOrLowGuess(int num, int guess) {
     // TODO
     return "";
@@ -50,9 +45,18 @@ string showLastDigitOptions(int num) {
     return "Last digit is one of these: 7, 3, 5";
 }
 
-string processDivisibilty(int num, int input){
-    // TODO; input is the divisor
-    return "";
+string processDivisibilty(int num, int divisor){
+    if (num % divisor == 0)
+        return "The number is divisible by " + divisor;
+    else
+        return "The number is not divisible by " + divisor;
+}
+
+string processPrime(int num) {
+    if (isPrime(num))
+        return "The number is a prime number";
+    else
+        return "The number is not a prime number";
 }
 
 string determinePrime(int num){
@@ -89,6 +93,9 @@ void guessingGameLoop (int count){
     int lower, upper;
     int newRange = -1;
     int count = 0;
+
+    int numberToGuess = generateNumber();
+
     bool validChoice = false;
     if (count == 0){
         cout << "I'm thinking of a number between " << LOWER << "and" << UPPER << endl << endl;
@@ -114,19 +121,33 @@ void guessingGameLoop (int count){
     cin >> playerChoice;
     while (validChoice == false){
         validChoice = true;
-        if (playerChoice == 1){
-            newRange = hotAndColdGuess(); // Just a placeholder name for your test that I'll implement.
+
+        // High Low
+        if (playerChoice == 1) {
+            int guess = getNumberInput("Input you guess >> ");
+            cout << processHighOrLowGuess(numberToGuess, guess) << endl;
         }
+
+        // Divisibility
         else if (playerChoice == 2){
-            disvisibiltyCheck();
+            int divisor = getNumberInput("Enter the divisor you want to check >> ");
+            cout << processDivisibilty(numberToGuess, divisor) << endl;
         }
+
+        // Prime Check
         else if (playerChoice == 3){
-            drewSpecialFeature();
+            cout << processPrime(numberToGuess) << endl;
         }
+
+        // Last Digit
         else if (playerChoice == 4){
-            jaredSpecialFeature();
+            cout << showLastDigitOptions(numberToGuess) << endl;
         }
-        else
+
+        // Quit
+        else {
             validChoice = false;
+        }
+            
     }
 }
