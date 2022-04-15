@@ -50,6 +50,11 @@ string showLastDigitOptions(int num) {
     return "Last digit is one of these: 7, 3, 5";
 }
 
+string processDivisibilty(int num, int input){
+    // TODO; input is the divisor
+    return "";
+}
+
 int generateNumber(){
     srand(time(0)); 
     int number;
