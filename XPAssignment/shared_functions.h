@@ -22,6 +22,16 @@ bool jaredSpecialFeature();
 int hotAndColdGuess();
 int disvisibiltyCheck();
 
+string processHighOrLowGuess(int num, int guess) {
+    // TODO
+    return "";
+}
+
+string showLastDigitOptions(int num) {
+    // TODO
+    return "Last digit is one of these: 7, 3, 5";
+}
+
 int generateNumber(){
     srand(time(0)); 
     int number;
@@ -43,7 +53,7 @@ void guessingGameLoop (int count){
     else
         cout << "Your current options:\n";
     cout << "1) Guess a number. If wrong, I'll tell ya 'hot' or 'cold'!\n" << "2) Check the number's divisibilty.\n";
-    cout << "Currently Known Info: \n" << "Known Range: " << lower << " to " << upper;
+    cout << "Currently Known Info: \n" << "Known Range: " << LOWER << " to " << UPPER;
 
     if (count >= 4)
         drewTextDisplay();
