@@ -55,9 +55,6 @@ TEST(DivisibilityTest, TestDivisibility) {
 // Jared Test
 TEST(JaredTestSuite, ShowLastDigitOptions) {
 	string result = showLastDigitOptions(57);
-
-	cout << result << endl;
-
 	auto unexpected = string::npos;
 	auto actual = result.find('7');
 	EXPECT_NE(unexpected, actual);

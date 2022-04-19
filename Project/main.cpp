@@ -52,8 +52,7 @@ int getInput(string prompt = "Guess A Number >> ", bool includeHints = true) {
 int main() {
 
     int finalGuess;
-    
-    cout << secretNumber << endl;
+    cout << "For Testing Purposes:" << secretNumber << endl;
 
     while (true) {
 
