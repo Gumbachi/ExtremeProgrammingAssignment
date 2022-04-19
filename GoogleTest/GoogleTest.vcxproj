@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9db4b164-31eb-46e3-8212-3441ad93e6ba}</ProjectGuid>
+    <ProjectGuid>{ce22eed1-8c68-4961-a6d7-71712c4ab9a7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -34,12 +34,8 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="shared_functions.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="drew_test.cpp" />
-    <ClCompile Include="jared_test.cpp" />
-    <ClCompile Include="shared_test.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
