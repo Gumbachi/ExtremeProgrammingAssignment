@@ -1,6 +1,6 @@
 #include "pch.h"
 #include <string>
-#include "shared_functions.h"
+#include "../Project/guessing_game.h"
 
 TEST(JaredTestSuite, ShowLastDigitOptions) {
 	string result = showLastDigitOptions(57);

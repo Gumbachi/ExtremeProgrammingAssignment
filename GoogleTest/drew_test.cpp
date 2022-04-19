@@ -1,6 +1,6 @@
 #include "pch.h"
 #include <string>
-#include "shared_functions.h"
+#include "../Project/guessing_game.h"
 
 TEST(DrewTestSuite, TestCheckForPrime) {
 	int num = 210;  // Purposefully out-of-scope of the range.
